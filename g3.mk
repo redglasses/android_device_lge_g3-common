@@ -196,6 +196,7 @@ PRODUCT_PACKAGES += \
     init.galbi.sh \
     init.galbi.syspart_fixup.sh \
     init.galbi.usb.sh \
+    init.recovery.g3.rc \
     ueventd.g3.rc
 
 PRODUCT_PACKAGES += \
