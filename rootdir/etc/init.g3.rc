@@ -267,6 +267,7 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_data
     chown system radio /sys/devices/virtual/input/lge_touch/lpwg_notify
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
+    write /sys/devices/virtual/input/lge_touch/lpwg_notify "1 1 0 0"
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_info
     chmod 644 /sys/devices/virtual/input/lge_touch/lpwg_test_info
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_ctrl
@@ -531,11 +532,6 @@ service bt-sap /system/bin/sapd 15
 service bt_hsic_control /system/bin/sh /system/etc/hsic.control.bt.sh
     user root
     disabled
-
-service bugreport /system/bin/bugmailer.sh -v
-    class main
-    disabled
-    oneshot
 
 service charger /sbin/charger_g3
     class charger
